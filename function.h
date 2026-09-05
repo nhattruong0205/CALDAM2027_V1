@@ -52,3 +52,12 @@ int find_max_gap_permutation(int n);
 
 // Stacks in series (Input -> S1 -> ... -> S{num_stacks} -> Output)
 bool sort_with_stacks(const int *pi, int n, int num_stacks, bool verbose);
+
+// West-style repeated single-pass greedy stack-sort heuristic (fast, incomplete)
+bool west_k_stack_sortable(const int *pi, int n, int k, bool verbose);
+
+// Patience-sorting-style pyramid-pile heuristic (fast, tests LIS <= num_stacks)
+bool pyramid_sortable(const int *pi, int n, int num_stacks, bool verbose);
+
+// Exhaustive brute force: sortable by `passes` sequential free-choice single-stack passes?
+bool free_pass_stack_sortable(const int *pi, int n, int passes);
